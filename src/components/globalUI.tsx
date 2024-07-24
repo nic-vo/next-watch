@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import {
 	ButtonHTMLAttributes,
 	DetailedHTMLProps,
@@ -53,3 +54,29 @@ export const GlobalButton = forwardRef(
 		</button>
 	),
 );
+
+export const GlobalBlockLink = ({
+	children,
+	href,
+}: PropsWithChildren & { href: string }) => {
+	const classer =
+		'block outline-none border-2 text-neutral-50 border-neutral-600 hover:bg-neutral-50 hover:text-neutral-950 focus:bg-neutral-50 focus:text-neutral-950 p-2 px-8 rounded-3xl transition-all';
+	if (href[0] === '/')
+		return (
+			<Link
+				href={href}
+				prefetch={false}
+				className={classer}>
+				{children}
+			</Link>
+		);
+
+	return (
+		<a
+			href={href}
+			target='_blank'
+			className={classer}>
+			{children}
+		</a>
+	);
+};
