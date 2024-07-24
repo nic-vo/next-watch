@@ -1,0 +1,7 @@
+.yarn
+.pnp.cjs
+.pnp.loader.mjs
+yarn.lock
+.next
+.vscode
+next-env.d.ts
