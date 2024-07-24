@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import { GlobalBlockLink } from '@/components/globalUI';
 import { PropsWithChildren } from 'react';
 
 const DemoLayout = (props: PropsWithChildren) => (
@@ -7,7 +7,7 @@ const DemoLayout = (props: PropsWithChildren) => (
 			<nav>
 				<ul>
 					<li>
-						<Link href='/'>&larr; Back to home</Link>
+						<GlobalBlockLink href='/'>&larr; Back to home</GlobalBlockLink>
 					</li>
 				</ul>
 			</nav>
