@@ -6,7 +6,7 @@ import { GlobalButton } from '@/components/globalUI';
 import {
 	NextRequestIPResponseParser,
 	type NextRequestIPResponseType,
-} from '@/app/api/next-request-ip/route';
+} from '@/app/api/next-request-ip/types';
 
 const ResultListSection = ({ children }: PropsWithChildren) => (
 	<section className='*:block'>{children}</section>
